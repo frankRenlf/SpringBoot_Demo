@@ -12,3 +12,7 @@ users:
     age: 21
   - name: lily
     age: 22
+
+baseDir: C:\Users\11195
+
+tmpDir: ${baseDir}\IdeaProjects

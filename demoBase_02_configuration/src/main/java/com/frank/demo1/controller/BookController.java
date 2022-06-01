@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/books")
 public class BookController {
 
-    @Value("${users[1].name}")
+    @Value("${tmpDir}")
     private String var;
 
     @GetMapping
