@@ -15,4 +15,5 @@ users:
 
 baseDir: C:\Users\11195
 
+# use "" to make it transfer th meaning
 tmpDir: ${baseDir}\IdeaProjects
