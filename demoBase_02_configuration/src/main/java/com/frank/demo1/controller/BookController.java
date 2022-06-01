@@ -1,11 +1,14 @@
 package com.frank.demo1.controller;
 
+import com.frank.demo1.MyDtaSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,20 +28,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookController {
 
     /**
-     *     @Value("${tmpDir}")
-     *     private String var;
+     * @Value("${tmpDir}") private String var;
      */
 
     @Autowired
-    private final Environment env;
+    private Environment env;
 
-    public BookController(Environment env) {
-        this.env = env;
-    }
+
+    @Autowired
+    private MyDtaSource myDtaSource;
 
     @GetMapping
     public String getById() {
 
-        return env.getProperty("users[1].age");
+        System.out.println(myDtaSource);
+//        return env.getProperty("users[1].age");
+        return Arrays.toString(new MyDtaSource[]{myDtaSource});
     }
 }

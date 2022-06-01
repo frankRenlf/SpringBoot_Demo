@@ -17,3 +17,10 @@ baseDir: C:\Users\11195
 
 # use "" to make it transfer th meaning
 tmpDir: ${baseDir}\IdeaProjects
+
+data1:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/springboot.db
+  username: root
+  password: 123456
+
