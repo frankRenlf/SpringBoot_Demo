@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo1/demo1.iml" filepath="$PROJECT_DIR$/demo1/demo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/demoBase_02_configuration/demoBase_02_configuration.iml" filepath="$PROJECT_DIR$/demoBase_02_configuration/demoBase_02_configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo_04_junit/demo_04_junit.iml" filepath="$PROJECT_DIR$/demo_04_junit/demo_04_junit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo_05_mybatis/demo_05_mybatis.iml" filepath="$PROJECT_DIR$/demo_05_mybatis/demo_05_mybatis.iml" />
     </modules>
   </component>
 </project>
