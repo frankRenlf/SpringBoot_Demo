@@ -1,7 +1,7 @@
-package com.frank.demo_05_mybatis.dao;
+package com.frank.demo_06_mybatis_plus.dao;
 
-import com.frank.demo_05_mybatis.domain.Book;
-import org.apache.ibatis.annotations.Delete;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.frank.demo_06_mybatis_plus.domain.Book;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -19,13 +19,5 @@ import org.apache.ibatis.annotations.Select;
  */
 
 @Mapper
-public interface BookDao {
-    @Select("select * from tbl_book where id = #{id}")
-    public Book getById(Integer id);
-
-
-    // wrong method
-    @Delete("delete * from tbl_book where id = #{id}")
-    public Book deleteById(Integer id);
-
+public interface BookDao extends BaseMapper<Book> {
 }

@@ -9,20 +9,27 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.frank</groupId>
-    <artifactId>demo_06_mybatis_plus</artifactId>
+    <artifactId>demo_07_druid</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo_06_mybatis_plus</name>
-    <description>demo_06_mybatis_plus</description>
+    <name>demo_07_druid</name>
+    <description>demo_07_druid</description>
     <properties>
         <java.version>11</java.version>
     </properties>
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.1</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.9</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
         </dependency>
 
         <dependency>

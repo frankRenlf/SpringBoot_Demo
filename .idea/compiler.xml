@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo_04_junit" />
         <module name="demoBase_02_configuration" />
+        <module name="demo_07_druid" />
         <module name="demo_05_mybatis" />
         <module name="demo1" />
         <module name="demo_06_mybatis_plus" />
@@ -18,6 +19,7 @@
       <module name="demo_04_junit" target="11" />
       <module name="demo_05_mybatis" target="11" />
       <module name="demo_06_mybatis_plus" target="11" />
+      <module name="demo_07_druid" target="11" />
       <module name="demoBase_02_configuration" target="11" />
       <module name="new_maven_text" target="11" />
     </bytecodeTargetLevel>
@@ -29,6 +31,7 @@
       <module name="demo_04_junit" options="-parameters" />
       <module name="demo_05_mybatis" options="-parameters" />
       <module name="demo_06_mybatis_plus" options="-parameters" />
+      <module name="demo_07_druid" options="-parameters" />
       <module name="new_maven_text" options="-parameters" />
     </option>
   </component>
