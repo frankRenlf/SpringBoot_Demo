@@ -20,6 +20,7 @@
       <module name="demo_05_mybatis" target="11" />
       <module name="demo_06_mybatis_plus" target="11" />
       <module name="demo_07_druid" target="11" />
+      <module name="demo_08_SSMP" target="11" />
       <module name="demo_08_ssmp" target="11" />
       <module name="demoBase_02_configuration" target="11" />
       <module name="new_maven_text" target="11" />
@@ -33,6 +34,7 @@
       <module name="demo_05_mybatis" options="-parameters" />
       <module name="demo_06_mybatis_plus" options="-parameters" />
       <module name="demo_07_druid" options="-parameters" />
+      <module name="demo_08_SSMP" options="-parameters" />
       <module name="new_maven_text" options="-parameters" />
     </option>
   </component>
