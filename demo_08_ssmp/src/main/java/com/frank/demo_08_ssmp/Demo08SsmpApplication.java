@@ -1,4 +1,4 @@
-package com.frank;
+package com.frank.demo_08_ssmp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

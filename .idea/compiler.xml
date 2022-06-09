@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo_07_druid" />
         <module name="demo_04_junit" />
+        <module name="demo_07_druid" />
         <module name="demoBase_02_configuration" />
         <module name="demo_05_mybatis" />
         <module name="demo1" />
@@ -35,6 +35,7 @@
       <module name="demo_06_mybatis_plus" options="-parameters" />
       <module name="demo_07_druid" options="-parameters" />
       <module name="demo_08_SSMP" options="-parameters" />
+      <module name="demo_08_ssmp" options="-parameters" />
       <module name="new_maven_text" options="-parameters" />
     </option>
   </component>

@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.frank</groupId>
-    <artifactId>demo_08_SSMP</artifactId>
+    <artifactId>demo_08_ssmp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo_08_SSMP</name>
-    <description>demo_08_SSMP</description>
+    <name>demo_08_ssmp</name>
+    <description>demo_08_ssmp</description>
     <properties>
         <java.version>11</java.version>
     </properties>
