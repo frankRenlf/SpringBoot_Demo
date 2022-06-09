@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/test_mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/demo_06_mybatis_plus/pom.xml" />
         <option value="$PROJECT_DIR$/demo_07_druid/pom.xml" />
+        <option value="$PROJECT_DIR$/demo_08_ssmp/pom.xml" />
       </list>
     </option>
   </component>

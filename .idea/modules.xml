@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo_05_mybatis/demo_05_mybatis.iml" filepath="$PROJECT_DIR$/demo_05_mybatis/demo_05_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo_06_mybatis_plus/demo_06_mybatis_plus.iml" filepath="$PROJECT_DIR$/demo_06_mybatis_plus/demo_06_mybatis_plus.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo_07_druid/demo_07_druid.iml" filepath="$PROJECT_DIR$/demo_07_druid/demo_07_druid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo_08_SSMP/demo_08_SSMP.iml" filepath="$PROJECT_DIR$/demo_08_SSMP/demo_08_SSMP.iml" />
     </modules>
   </component>
 </project>
