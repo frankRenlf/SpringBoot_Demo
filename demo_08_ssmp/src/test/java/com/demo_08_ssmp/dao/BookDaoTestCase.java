@@ -1,5 +1,7 @@
 package com.demo_08_ssmp.dao;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.demo_08_ssmp.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +54,8 @@ public class BookDaoTestCase {
 
     @Test
     void testGetPage() {
+        IPage<Book> iPage = new Page<>(1, 5);
+        bookDao.selectPage(iPage, null);
     }
 
     @Test
