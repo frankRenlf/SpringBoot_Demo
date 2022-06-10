@@ -1,5 +1,6 @@
 package com.demo_08_ssmp.dao;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.demo_08_ssmp.domain.Book;
@@ -66,5 +67,8 @@ public class BookDaoTestCase {
 
     @Test
     void testGetBy() {
+        QueryWrapper<Book> qw = new QueryWrapper<>();
+        qw.like("name", "spring");
+        bookDao.selectList(qw);
     }
 }
