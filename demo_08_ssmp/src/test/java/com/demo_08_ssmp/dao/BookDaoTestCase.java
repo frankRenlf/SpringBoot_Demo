@@ -1,5 +1,6 @@
 package com.demo_08_ssmp.dao;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -71,4 +72,13 @@ public class BookDaoTestCase {
         qw.like("name", "spring");
         bookDao.selectList(qw);
     }
+
+    @Test
+    void testGetBy2() {
+        String name = "1";
+        LambdaQueryWrapper<Book> lqw = new LambdaQueryWrapper<>();
+        lqw.like(name != null, Book::getName, name);
+        bookDao.selectList(lqw);
+    }
+
 }
