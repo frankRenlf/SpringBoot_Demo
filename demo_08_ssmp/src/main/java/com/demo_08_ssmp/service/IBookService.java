@@ -1,7 +1,10 @@
 package com.demo_08_ssmp.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.demo_08_ssmp.domain.Book;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,4 +19,9 @@ import com.demo_08_ssmp.domain.Book;
  * @Description :
  */
 public interface IBookService extends IService<Book> {
+
+    List<Book> getBy(String str);
+
+    IPage<Book> getPage(Integer currentPage, Integer pageSize);
+
 }

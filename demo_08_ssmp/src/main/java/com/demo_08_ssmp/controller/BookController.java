@@ -1,12 +1,10 @@
 package com.demo_08_ssmp.controller;
 
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.demo_08_ssmp.domain.Book;
 import com.demo_08_ssmp.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,6 +31,36 @@ public class BookController {
     @GetMapping
     public List<Book> getAll() {
         return iBookService.list();
+    }
+
+    @PostMapping
+    public boolean save(@RequestBody Book book) {
+        return iBookService.save(book);
+    }
+
+    @PutMapping
+    public boolean update(@RequestBody Book book) {
+        return iBookService.updateById(book);
+    }
+
+    @DeleteMapping("{id}")
+    public boolean delete(@PathVariable Integer id) {
+        return iBookService.removeById(id);
+    }
+
+    @GetMapping("{id}")
+    public Book getById(@PathVariable Integer id) {
+        return iBookService.getById(id);
+    }
+
+    @GetMapping("str/{str}")
+    public List<Book> getBy(@PathVariable String str) {
+        return iBookService.getBy(str);
+    }
+
+    @GetMapping("{currentPage}/{pageSize}")
+    public IPage<Book> getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize) {
+        return iBookService.getPage(currentPage, pageSize);
     }
 
 }

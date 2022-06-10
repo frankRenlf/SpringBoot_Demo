@@ -3,7 +3,7 @@ package com.demo_08_ssmp.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.demo_08_ssmp.domain.Book;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+
 
 /**
  * Created with IntelliJ IDEA.
