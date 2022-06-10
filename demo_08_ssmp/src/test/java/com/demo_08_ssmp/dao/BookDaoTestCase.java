@@ -54,8 +54,14 @@ public class BookDaoTestCase {
 
     @Test
     void testGetPage() {
-        IPage<Book> iPage = new Page<>(1, 5);
+        IPage<Book> iPage = new Page<>(2, 5);
         bookDao.selectPage(iPage, null);
+        System.out.println(iPage.getPages());
+        System.out.println(iPage.getCurrent());
+        System.out.println(iPage.getRecords());
+        System.out.println(iPage.getSize());
+        System.out.println(iPage.getTotal());
+
     }
 
     @Test

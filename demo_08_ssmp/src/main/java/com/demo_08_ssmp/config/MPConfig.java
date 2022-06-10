@@ -26,6 +26,6 @@ public class MPConfig {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         return interceptor;
-    }
+    } 
 
 }
