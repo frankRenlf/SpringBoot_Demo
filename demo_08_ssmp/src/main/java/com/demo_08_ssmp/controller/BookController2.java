@@ -22,7 +22,7 @@ import java.util.List;
  */
 
 //@RestController
-@RequestMapping("/books")
+//@RequestMapping("/books")
 public class BookController2 {
 
     @Autowired
