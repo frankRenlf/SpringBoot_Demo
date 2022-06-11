@@ -53,7 +53,7 @@ public class BookController {
         return iBookService.getById(id);
     }
 
-    @GetMapping("str/{str}")
+    @GetMapping("substr/{str}")
     public List<Book> getBy(@PathVariable String str) {
         return iBookService.getBy(str);
     }
