@@ -1,0 +1,35 @@
+package com.demo_08_ssmp.controller.utils;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Optional;
+
+/**
+ * Created with IntelliJ IDEA.
+ *
+ * @author : Frank.Ren
+ * @version : 1.0
+ * @Project : SpringBoot_Demo
+ * @Package : com.demo_08_ssmp.controller.utils
+ * @createTime : 2022/6/11 15:31
+ * @Email : sc19lr@leeds.ac.uk
+ * @github : https://github.com/frankRenlf?tab=overview&from=2022-04-01&to=2022-04-30
+ * @Description :
+ */
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Result {
+
+    private Boolean status;
+    private Object data;
+
+    public Result(Boolean status) {
+        this.status = status;
+        this.data = null;
+    }
+
+}

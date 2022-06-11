@@ -1,7 +1,6 @@
 package com.demo_08_ssmp.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.demo_08_ssmp.controller.utils.Result;
 import com.demo_08_ssmp.domain.Book;
 import com.demo_08_ssmp.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,46 +21,46 @@ import java.util.List;
  * @Description :
  */
 
-@RestController
+//@RestController
 @RequestMapping("/books")
-public class BookController {
+public class BookController2 {
 
     @Autowired
     private IBookService iBookService;
 
     @GetMapping
-    public Result getAll() {
-        return new Result(true, iBookService.list());
+    public List<Book> getAll() {
+        return iBookService.list();
     }
 
     @PostMapping
-    public Result save(@RequestBody Book book) {
-        return new Result(iBookService.save(book));
+    public boolean save(@RequestBody Book book) {
+        return iBookService.save(book);
     }
 
     @PutMapping
-    public Result update(@RequestBody Book book) {
-        return new Result(iBookService.updateById(book));
+    public boolean update(@RequestBody Book book) {
+        return iBookService.updateById(book);
     }
 
     @DeleteMapping("{id}")
-    public Result delete(@PathVariable Integer id) {
-        return new Result(iBookService.removeById(id));
+    public boolean delete(@PathVariable Integer id) {
+        return iBookService.removeById(id);
     }
 
     @GetMapping("{id}")
-    public Result getById(@PathVariable Integer id) {
-        return new Result(true, iBookService.getById(id));
+    public Book getById(@PathVariable Integer id) {
+        return iBookService.getById(id);
     }
 
     @GetMapping("substr/{str}")
-    public Result getBy(@PathVariable String str) {
-        return new Result(true, iBookService.getBy(str));
+    public List<Book> getBy(@PathVariable String str) {
+        return iBookService.getBy(str);
     }
 
     @GetMapping("{currentPage}/{pageSize}")
-    public Result getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize) {
-        return new Result(true, iBookService.getPage(currentPage, pageSize));
+    public IPage<Book> getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize) {
+        return iBookService.getPage(currentPage, pageSize);
     }
 
 }
