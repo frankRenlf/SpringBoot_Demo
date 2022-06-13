@@ -26,10 +26,22 @@ public class Result {
 
     private Boolean status;
     private Object data;
+    private String message;
 
     public Result(Boolean status) {
         this.status = status;
         this.data = null;
+    }
+
+    public Result(Boolean status, Object data) {
+        this.status = status;
+        this.data = data;
+    }
+
+    public Result(Boolean status, String msg) {
+        this.status = status;
+        this.data = null;
+        this.message = msg;
     }
 
 }

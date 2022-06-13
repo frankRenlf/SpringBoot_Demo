@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,9 +37,11 @@ public class BookController {
     }
 
     @PostMapping
-    public Result save(@RequestBody Book book) {
+    public Result save(@RequestBody Book book) throws IOException {
 //        throw new IOException();
-        return new Result(iBookService.save(book));
+//        if (Objects.equals(book.getName(), "123")) throw new IOException();
+        Boolean flag = iBookService.save(book);
+        return new Result(flag, flag ? "增加成功" : "增加失败");
     }
 
     @PutMapping
@@ -61,9 +64,23 @@ public class BookController {
         return new Result(true, iBookService.getBy(str));
     }
 
+//    @GetMapping("{currentPage}/{pageSize}")
+//    public Result getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize) {
+//        IPage<Book> iPage = iBookService.getPage(currentPage, pageSize);
+//        if (currentPage > iPage.getSize()) {
+//            iPage = iBookService.getPage((int) iPage.getSize(), pageSize);
+//        }
+//        return new Result(true, iPage);
+//    }
+
     @GetMapping("{currentPage}/{pageSize}")
-    public Result getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize) {
-        return new Result(true, iBookService.getPage(currentPage, pageSize));
+    public Result getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize, Book book) {
+//        System.out.println("=========" + book);
+        IPage<Book> iPage = iBookService.getPage(currentPage, pageSize, book);
+        if (currentPage > iPage.getSize()) {
+            iPage = iBookService.getPage((int) iPage.getSize(), pageSize, book);
+        }
+        return new Result(true, iPage);
     }
 
 }
