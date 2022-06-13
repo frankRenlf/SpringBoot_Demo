@@ -7,6 +7,7 @@ import com.demo_08_ssmp.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -36,6 +37,7 @@ public class BookController {
 
     @PostMapping
     public Result save(@RequestBody Book book) {
+//        throw new IOException();
         return new Result(iBookService.save(book));
     }
 
