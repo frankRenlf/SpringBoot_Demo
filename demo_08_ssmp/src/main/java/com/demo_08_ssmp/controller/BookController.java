@@ -77,8 +77,10 @@ public class BookController {
     public Result getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize, Book book) {
 //        System.out.println("=========" + book);
         IPage<Book> iPage = iBookService.getPage(currentPage, pageSize, book);
-        if (currentPage > iPage.getSize()) {
-            iPage = iBookService.getPage((int) iPage.getSize(), pageSize, book);
+        System.out.println("currentPage=====>" + currentPage);
+        System.out.println("iPage.getSize()===>" + iPage.getSize());
+        if (currentPage > iPage.getPages()) {
+            iPage = iBookService.getPage((int) iPage.getPages(), pageSize, book);
         }
         return new Result(true, iPage);
     }
