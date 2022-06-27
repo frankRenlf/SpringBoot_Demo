@@ -1,5 +1,7 @@
 package com.manageaccount.service.Impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.manageaccount.dao.UserDao;
 import com.manageaccount.domain.User;
@@ -27,6 +29,13 @@ public class IUserServiceImpl extends ServiceImpl<UserDao, User> implements IUse
     @Override
     public Boolean check(User user) {
         return userDao.selectById(user.getId()).equals(user);
+    }
+
+    @Override
+    public IPage<User> getPage(Integer currentPage, Integer pageSize) {
+        IPage<User> iPage = new Page<>(currentPage, pageSize);
+        userDao.selectPage(iPage, null);
+        return iPage;
     }
 
 }

@@ -1,5 +1,6 @@
 package com.manageaccount.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.manageaccount.domain.User;
 
@@ -17,4 +18,6 @@ import com.manageaccount.domain.User;
  */
 public interface IUserService extends IService<User> {
     Boolean check(User user);
+
+    IPage<User> getPage(Integer currentPage, Integer pageSize);
 }
