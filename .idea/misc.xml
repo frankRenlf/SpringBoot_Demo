@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/demo_06_mybatis_plus/pom.xml" />
         <option value="$PROJECT_DIR$/demo_07_druid/pom.xml" />
         <option value="$PROJECT_DIR$/demo_08_ssmp/pom.xml" />
+        <option value="$PROJECT_DIR$/ManageAccount/pom.xml" />
       </list>
     </option>
   </component>
