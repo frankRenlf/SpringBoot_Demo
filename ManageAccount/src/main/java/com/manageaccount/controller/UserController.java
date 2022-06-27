@@ -64,4 +64,12 @@ public class UserController {
         return new Result(key, key ? "login success" : "login failed");
     }
 
+    @PostMapping("/update")
+    public Result update(@RequestBody User[] user) {
+        if (identify(user[0]).getStatus()) {
+            return new Result(true, iUserService.updateById(user[1]), "update success");
+        }
+        return new Result(false, "wrong identify");
+    }
+
 }
