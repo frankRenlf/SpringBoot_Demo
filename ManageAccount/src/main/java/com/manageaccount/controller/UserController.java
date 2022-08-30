@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.manageaccount.controller.utils.Result;
 import com.manageaccount.domain.User;
 import com.manageaccount.service.IUserService;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,7 +66,7 @@ public class UserController {
     }
 
     @PostMapping("/update")
-    public Result update(@RequestBody User[] user) {
+    public Result update(@NotNull @RequestBody User[] user) {
         if (identify(user[0]).getStatus()) {
             return new Result(true, iUserService.updateById(user[1]), "update success");
         }
