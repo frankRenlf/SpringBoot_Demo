@@ -1,7 +1,6 @@
 package com.demo_08_ssmp.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-
 import com.demo_08_ssmp.domain.User;
 
 import java.util.List;

@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
  * @version : 1.0
  * @Project : SpringBoot_Demo
  * @Package : com.demo_08_ssmp.domain
- * @createTime : 2022/6/11 17:16
+ * @createTime : 2022/9/16 10:41
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf?tab=overview&from=2022-04-01&to=2022-04-30
+ * @github : https://github.com/frankRenlf
  * @Description :
  */
 @Data
