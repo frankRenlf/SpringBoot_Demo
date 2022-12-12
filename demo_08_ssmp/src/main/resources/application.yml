@@ -12,7 +12,7 @@
 #第二种配置方法,更推荐
 
 server:
-  port: 80
+  port: 8082
 spring:
   datasource:
     druid:
